@@ -1,0 +1,8 @@
+{
+    "shadow": {
+        "level1": { "value": "0px 4px 8px" },
+        "level2": { "value": "0px 8px 24px" },
+        "level3": { "value": "0px 16px 32px" },
+        "level4": { "value": "0px 16px 48px" }
+    }
+}

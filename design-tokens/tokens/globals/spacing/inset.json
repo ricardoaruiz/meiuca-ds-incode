@@ -1,0 +1,12 @@
+{
+    "spacing": {
+        "inset": {
+            "quarck": { "value": "4px 4px" },
+            "nano": { "value": "8px 8px" },
+            "xs": { "value": "16px 16px" },
+            "sm": { "value": "24px 24px" },
+            "md": { "value": "32px 32px" },
+            "lg": { "value": "40px 40px" }
+        }
+    }
+}
