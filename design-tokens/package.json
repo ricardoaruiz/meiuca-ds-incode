@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Ricardo Ruiz",
   "license": "MIT",
+  "scripts": {
+    "build": "node src/index.js"
+  },
   "devDependencies": {
     "style-dictionary": "^3.7.0"
   }
