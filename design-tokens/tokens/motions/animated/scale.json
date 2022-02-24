@@ -1,5 +1,7 @@
 {
-    "small": { "value": "5%" },
-    "medium": { "value": "25%" },
-    "large": { "value": "50%" }
+    "scale": {
+        "small": { "value": "5%" },
+        "medium": { "value": "25%" },
+        "large": { "value": "50%" }
+    }
 }

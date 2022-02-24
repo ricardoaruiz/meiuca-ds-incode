@@ -1,5 +1,7 @@
 {
-    "soft": { "value": "cubic-bezier(0.48, 0, 0.48, 1)" },
-    "energic": { "value": "cubic-bezier(0.64, 0, 0.92, 1)" },
-    "calm": { "value": "cubic-bezier(0.08, 0, 0.35, 1)" }
+    "vibe": {
+        "soft": { "value": "cubic-bezier(0.48, 0, 0.48, 1)" },
+        "energetic": { "value": "cubic-bezier(0.64, 0, 0.92, 1)" },
+        "calm": { "value": "cubic-bezier(0.08, 0, 0.35, 1)" }
+    }
 }

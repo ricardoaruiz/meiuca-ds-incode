@@ -1,6 +1,10 @@
 const path = require('path')
 const { getBrands } = require('./brand')
 const { buildTokens } = require('./build')
+const { registerFilters, registerFormats } = require('./config')
+
+registerFilters()
+registerFormats()
 
 getBrands().forEach(async (current) => {
     const buildPath = {
