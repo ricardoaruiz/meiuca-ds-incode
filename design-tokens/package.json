@@ -1,5 +1,5 @@
 {
-  "name": "@rar/design-tokens",
+  "name": "@ricardoaruiz/design-tokens",
   "version": "0.0.1",
   "description": "Biblioteca de Design Tokens para o Curso Design System in Code da Meiuca",
   "main": "src/index.js",
