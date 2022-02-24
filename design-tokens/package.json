@@ -1,11 +1,20 @@
 {
-  "name": "design-tokens",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@rar/design-tokens",
+  "version": "0.0.1",
+  "description": "Biblioteca de Design Tokens para o Curso Design System in Code da Meiuca",
+  "main": "src/index.js",
   "author": "Ricardo Ruiz",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardoaruiz/meiuca-ds-incode"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "node src/index.js"
+    "build": "node src/index.js",
+    "build:dev": "rm -rf dist && node src/index.js"
   },
   "devDependencies": {
     "style-dictionary": "^3.7.0"

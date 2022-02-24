@@ -8,7 +8,8 @@ const fs = require('fs')
 const FOLDER = {
     TOKENS: 'tokens',
     GLOBALS: 'globals',
-    BRANDS: 'brands'
+    BRANDS: 'brands',
+    MOTIONS: 'motions'
 }
 
 /**
@@ -53,14 +54,24 @@ const getDirectories = (dirPath) => {
  * @returns array with all jsons tokens
 */
 const getBrands = () => {
-    const BRANDS = [{
-        source: path.resolve(__dirname, '..', FOLDER.TOKENS, FOLDER.GLOBALS, '**', '*.json'),
-        dest: '',
-        filename: 'globals',
-        brand: '',
-        theme: '',
-        mode: ''
-    }]
+    const BRANDS = [
+        {
+            source: path.resolve(__dirname, '..', FOLDER.TOKENS, FOLDER.GLOBALS, '**', '*.json'),
+            dest: '',
+            filename: 'globals',
+            brand: '',
+            theme: '',
+            mode: ''
+        },
+        {
+            source: path.resolve(__dirname, '..', FOLDER.TOKENS, FOLDER.MOTIONS, '**', '*.json'),
+            dest: '',
+            filename: 'motions',
+            brand: '',
+            theme: '',
+            mode: ''
+        }
+    ]
 
     getDirectories(path.resolve(FOLDER.TOKENS, FOLDER.BRANDS)).forEach(brand => {
         getDirectories(path.resolve(FOLDER.TOKENS, FOLDER.BRANDS, brand)).forEach(theme => {
