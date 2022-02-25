@@ -24,6 +24,36 @@ module.exports = {
             title: 'Design System Core',
             inject: 'body'
         })
-    ]
+    ],
+    module: {
+        rules: [
+            { test: /\.css$/i, use: ['style-loader','css-loader'] },
+            { 
+                test: /\.s[ac]ss$/i, 
+                use: [
+                    'sass-to-string',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                outputStyle: 'compressed'
+                            }
+                        }
+                    }
+                ]
+            },
+            { 
+                test: /\.m?js$/i , 
+                exclude: /(node_modules)/, 
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-proposal-object-rest-spread']
+                    }
+                }
+            }
+        ]
+    }
 
 }
