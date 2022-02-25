@@ -26,6 +26,8 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@ricardoaruiz/design-assets": "^0.0.1",
+    "@ricardoaruiz/design-tokens": "^0.0.1",
     "lit": "^2.2.0"
   }
 }

@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -18,6 +19,9 @@ module.exports = {
             index: 'index.html'
         }
     },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js']
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -25,6 +29,19 @@ module.exports = {
             filename: 'index.html',
             title: 'Design System Core',
             inject: 'body'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'node_modules/@ricardoaruiz/design-tokens/dist/css/globals.css',
+                    to: 'tokens/globals.css'
+                },
+                {
+                    from: '**/**/*.css',
+                    context: 'node_modules/@ricardoaruiz/design-tokens/dist/css',
+                    to: 'tokens/[path]/[name][ext]'
+                }
+            ]
         })
     ],
     module: {
