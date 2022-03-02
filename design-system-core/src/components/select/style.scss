@@ -1,0 +1,84 @@
+@import '@ricardoaruiz/design-tokens/dist/scss/mixins.scss';
+
+.select {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+
+  label {
+    color: var(--neutral-color-elements-01);
+    font-size: var(--font-size-xxs);
+    font-family: var(--font-family-01);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-default);
+    padding-bottom: var(--spacing-quarck);
+  }
+
+  select {
+    background-color: transparent;
+    border-color: var(--neutral-color-elements-03);
+    border-width: var(--border-width-thin);
+    border-radius: var(--border-radius-sm);
+    padding: 0 var(--spacing-xxxs);
+    height: 48px;
+    box-sizing: border-box;
+
+    &__placeholder-text {
+      color: var(--neutral-color-elements-03);
+      font-size: var(--font-size-xs);
+      font-family: var(--font-family-01);
+      font-weight: var(--font-weight-regular);
+      line-height: var(--line-height-default);
+    }
+
+    @include motion-token(switch-slow, '&:hover');
+    &:focus{
+      outline-width: 0;
+      outline-color: var(--highlight-color-pure);
+      outline-offset: var(--border-width-thin);
+    }
+
+    &:invalid {
+      color: var(--neutral-color-elements-02)
+    }
+  }
+  
+  &:hover {
+    select {
+      background-color: var(--neutral-color-surface-02);
+    }
+  }
+
+  &--error {
+    select{
+      background-color: var(--feedback-color-warning-01);
+      border-color: var(--feedback-color-warning-pure);
+    }
+  }
+
+  &--disabled {
+    label {
+      color: var(--neutral-color-elements-01);
+    }
+    select {
+      background-color: var(--neutral-color-surface-02);
+      border-color: var(--neutral-color-elements-01);
+      color: var(--neutral-color-elements-01);
+      &::placeholder {
+        color: var(--neutral-color-elements-01);
+      }
+    }
+    .select__helper-text {
+      color: var(--neutral-color-elements-01)
+    }
+  }
+
+  &__helper-text {
+    padding-top: var(--spacing-nano);
+    color: var(--neutral-color-elements-03);
+    font-size: var(--font-size-xxs);
+    font-family: var(--font-family-01);
+    line-height: var(--line-height-default);
+    font-weight: var(--font-weight-regular);
+  }
+}
