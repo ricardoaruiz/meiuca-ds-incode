@@ -16,7 +16,7 @@
 
   select {
     background-color: transparent;
-    border-color: var(--neutral-color-elements-03);
+    border-color: var(--neutral-color-elements-02);
     border-width: var(--border-width-thin);
     border-radius: var(--border-radius-sm);
     padding: 0 var(--spacing-xxxs);
@@ -32,11 +32,6 @@
     }
 
     @include motion-token(switch-slow, '&:hover');
-    &:focus{
-      outline-width: 0;
-      outline-color: var(--highlight-color-pure);
-      outline-offset: var(--border-width-thin);
-    }
 
     &:invalid {
       color: var(--neutral-color-elements-02)
@@ -70,6 +65,15 @@
     }
     .select__helper-text {
       color: var(--neutral-color-elements-01)
+    }
+  }
+
+  &--focus {
+    select {
+      outline-width: 0;
+      outline-color: var(--highlight-color-pure);
+      outline-offset: var(--border-width-thin);
+      border-color: var(--neutral-color-elements-03);
     }
   }
 

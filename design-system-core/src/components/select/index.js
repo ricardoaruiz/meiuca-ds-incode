@@ -34,6 +34,10 @@ export default class DSSelect extends LitElement {
     this.error = false
   }
 
+  get selectContainer() {
+    return this.shadowRoot.querySelector('.select')
+  }
+
   firstUpdated() {
     const slot = this.shadowRoot.querySelector('slot')
     const select = this.shadowRoot.querySelector('select')
@@ -45,7 +49,36 @@ export default class DSSelect extends LitElement {
       })
   }
 
-  showHelperText() {
+  _handleChange(event) {
+    this.dispatchEvent(
+      new CustomEvent(
+        'dsChange', { 
+          detail: { 
+            value: event.target.value 
+          }, 
+          bubbles: true, 
+          composed: true 
+      }
+    ))
+  }
+
+  _handleFocus() {
+    this.selectContainer.classList.add('select--focus')
+    this.dispatchEvent(new CustomEvent('dsFocus', {
+      bubbles: true,
+      composed: true
+    }))
+  }
+
+  _handleBlur() {
+    this.selectContainer.classList.remove('select--focus')
+    this.dispatchEvent(new CustomEvent('dsBlur', {
+      bubbles: true,
+      composed: true
+    }))
+  }
+
+  _showHelperText() {
     return this.helperText ? html`
       <span 
         class="select__helper-text"
@@ -73,6 +106,9 @@ export default class DSSelect extends LitElement {
           .value=${this.value}
           ?required=${this.required}
           ?disabled=${this.disabled}
+          @input=${this._handleChange}
+          @focus=${this._handleFocus}
+          @blur=${this._handleBlur}
         >
           <option 
             value="" 
@@ -85,7 +121,7 @@ export default class DSSelect extends LitElement {
           </option>
         </select>
         
-        ${this.showHelperText()}
+        ${this._showHelperText()}
       </div>
 
       <slot></slot>

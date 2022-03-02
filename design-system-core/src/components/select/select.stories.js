@@ -1,4 +1,5 @@
 import { html } from 'lit'
+import { action } from "@storybook/addon-actions"
 import './index.js';
 
 export default {
@@ -16,6 +17,18 @@ export const Select = ({
     error
 }) => {
 
+    const _handleChange = (event) => {
+        action('dsChange')(event.detail)
+    }
+
+    const _handleFocus = (event) => {
+        action('dsFocus')(event)
+    }
+
+    const _handleBlur = (event) => {
+        action('dsBlur')(event)
+    }
+
     return html`
         <ds-select
             id="my-select"
@@ -27,6 +40,9 @@ export const Select = ({
             ?disabled=${disabled}
             ?required=${required}
             ?error=${error}
+            @dsChange=${_handleChange}
+            @dsFocus=${_handleFocus}
+            @dsBlur=${_handleBlur}
         >
             <option value="1">Item 01</option>
             <option value="2">Item 02</option>
