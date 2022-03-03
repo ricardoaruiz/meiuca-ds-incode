@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     mode: 'development',
-    entry: '/src/index.js',
+    entry: '/src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'components.[contenthash].js',
@@ -46,6 +46,14 @@ module.exports = {
     ],
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                loader: "ts-loader",
+                exclude: /node_modules/,
+                options: {
+                  configFile: "tsconfig.json"
+                }
+            },
             { test: /\.css$/i, use: ['style-loader','css-loader'] },
             { 
                 test: /\.s[ac]ss$/i, 

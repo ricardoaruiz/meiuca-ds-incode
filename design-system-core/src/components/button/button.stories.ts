@@ -1,11 +1,12 @@
+import { Meta, Story } from '@storybook/web-components'
 import { html } from 'lit'
-import './index.js';
+import './index.ts';
 
 export default {
   title: 'Components/DSButton',
-};
+} as Meta
 
-export const Button = ({
+export const Button: Story = ({
     label,
     disabled,
     loading

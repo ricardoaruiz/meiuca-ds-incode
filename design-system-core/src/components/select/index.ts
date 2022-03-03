@@ -1,39 +1,42 @@
-import { LitElement, html, css, unsafeCSS } from 'lit'
+import { LitElement, html, css, unsafeCSS, customElement, property } from "lit-element";
 import { classMap } from 'lit/directives/class-map.js';
 
 import style from './style.scss'
 
-export default class DSSelect extends LitElement {
+@customElement("ds-select")
+export class DSSelect extends LitElement {
 
   static styles = css`
     ${unsafeCSS(style)}
   `
 
-  static properties = {
-    id: { type: String },
-    name : { type: String },
-    label: { type: String },
-    placeholder: { type: String },
-    value: { type: String },
-    helperText: { type: String },
-    required: { type: Boolean },
-    disabled: { type: Boolean },
-    error: { type: Boolean }
-  };
+  @property({ type: String })
+  id = ''
 
-  constructor() {
-    super()
-    this.id = ''
-    this.name  = ''
-    this.label = ''
-    this.placeholder = ''
-    this.value = ''
-    this.helperText = ''
-    this.required = false
-    this.disabled = false
-    this.error = false
-  }
+  @property({ type: String })
+  name = ''
 
+  @property({ type: String })
+  label = ''
+
+  @property({ type: String })
+  placeholder = ''
+
+  @property({ type: String })
+  value = ''
+
+  @property({ type: String })
+  helperText = ''
+
+  @property({ type: Boolean })
+  required = false
+
+  @property({ type: Boolean })
+  disabled = false
+
+  @property({ type: Boolean })
+  error = false
+  
   get selectContainer() {
     return this.shadowRoot.querySelector('.select')
   }
@@ -49,12 +52,12 @@ export default class DSSelect extends LitElement {
       })
   }
 
-  _handleChange(event) {
+  _handleChange(event: Event) {
     this.dispatchEvent(
       new CustomEvent(
         'dsChange', { 
           detail: { 
-            value: event.target.value 
+            value: (event.target as HTMLSelectElement).value 
           }, 
           bubbles: true, 
           composed: true 
@@ -128,5 +131,3 @@ export default class DSSelect extends LitElement {
     `
   }
 }
-
-!customElements.get('ds-select') && customElements.define('ds-select', DSSelect)

@@ -1,12 +1,13 @@
+import { Meta, Story } from '@storybook/web-components'
 import { html } from 'lit'
 import { action } from "@storybook/addon-actions"
-import './index.js';
+import './index.ts';
 
 export default {
   title: 'Components/DSSelect',
-};
+} as Meta
 
-export const Select = ({
+export const Select: Story = ({
     name,
     label,
     value,

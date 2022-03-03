@@ -1,26 +1,22 @@
-import { LitElement, html, css, unsafeCSS } from 'lit'
+import { LitElement, html, css, unsafeCSS, customElement, property } from "lit-element";
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 import style from './style.scss'
 
+@customElement("ds-button")
 export class DSButton extends LitElement {
 
   static styles = css`
     ${unsafeCSS(style)}
   `
 
-  static properties = {
-    loading: { type: Boolean },
-    disabled: { type: Boolean }
-  }
-  
-  constructor() {
-      super()
-      this.loading = false
-      this.disabled = false
-  }
+  @property({ type: Boolean })
+  loading = false
 
+  @property({ type: Boolean })
+  disabled = false
+    
   _handleClick() {
     this.dispatchEvent(new CustomEvent('dsClick', {
       bubbles: true,
@@ -47,6 +43,3 @@ export class DSButton extends LitElement {
     `
   }
 }
-
-customElements.define('ds-button', DSButton)
-
