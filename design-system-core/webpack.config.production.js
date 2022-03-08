@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+
 const webpackConfigCommons = require('./webpack.config.commons')
 const entries = require('./webpack_entries.json');
 

@@ -1,15 +1,23 @@
 const path = require('path')
+const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
 
 module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'components/[name].js',
         libraryTarget: 'umd',
-        library: 'design-system-core'
+        library: 'design-system-core',
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
+    plugins: [
+        new TypescriptDeclarationPlugin({
+            out: 'index.d.ts',
+            removeMergedDeclarations: true,
+            removeComments: true
+        })
+    ],
     module: {
         rules: [
             {
