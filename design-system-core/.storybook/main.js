@@ -1,4 +1,4 @@
-const webpackBase = require('../webpack.config')
+const webpackBase = require('../webpack.config.development')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
@@ -9,7 +9,8 @@ module.exports = {
     builder: "webpack5"
   },
   webpackFinal: (config) => {
-    config.module.rules.push(...webpackBase.module.rules)
+    const webpackConfig = webpackBase();
+    config.module.rules.push(...webpackConfig.module.rules)
 
     config.plugins.push(
       new CopyWebpackPlugin({
