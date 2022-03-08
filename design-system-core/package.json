@@ -1,9 +1,17 @@
 {
-  "name": "design-system-core",
-  "version": "1.0.0",
+  "name": "@ricardoaruiz/design-system-core",
+  "version": "0.0.1",
+  "description": "Biblioteca de Components Core para o Curso Design System in Code da Meiuca",
   "main": "index.js",
   "author": "Ricardo Ruiz",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardoaruiz/meiuca-ds-incode"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "webpack serve --config webpack.config.development.js",
     "build:dev": "webpack --config webpack.config.development.js",
