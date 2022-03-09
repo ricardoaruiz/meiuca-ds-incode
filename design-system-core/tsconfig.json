@@ -4,6 +4,7 @@
       "target": "es6",
       "sourceMap": true,
       "declaration": true,
+      "declarationDir": "dist",
       "lib": [ "es2015", "dom" ],
       "experimentalDecorators": true,
       "removeComments": true,
@@ -11,6 +12,7 @@
     },
     "exclude": [
       "node_modules",
+      "dist",
       "src/**/*.test.ts",
       "src/**/*.stories.ts"
     ]
