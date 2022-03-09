@@ -2,5 +2,18 @@
   width: 100%;
   max-width: 1440px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  
+  & div {
+    background-color: var(--brand-color-pure);
+    color: var(--neutral-color-surface-pure);
+    border-radius: var(--border-radius-md);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
