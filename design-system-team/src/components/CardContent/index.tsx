@@ -1,14 +1,17 @@
 import React from 'react'
-import '@ricardoaruiz/design-system-core/dist/components/tag'
+
+import '@ricardoaruiz/design-system-core/dist/components/card'
 import '@ricardoaruiz/design-system-core/dist/components/typograph'
+import '@ricardoaruiz/design-system-core/dist/components/tag'
 
 import { CardContentProps } from './types'
 import './styles.scss'
 
 export const CardContent: React.VFC<CardContentProps> = ({ tag, title, text }) => {
   return (
-    <div>
+    <ds-card class="card-content">
         <ds-tag>{tag}</ds-tag>
+
         <ds-typograph 
             component="heading" 
             size="lg" 
@@ -16,11 +19,12 @@ export const CardContent: React.VFC<CardContentProps> = ({ tag, title, text }) =
         >
             {title}
         </ds-typograph>
+
         <ds-typograph 
             component="paragraph"
         >
             {text}
         </ds-typograph>
-    </div>
+    </ds-card>
   )
 }

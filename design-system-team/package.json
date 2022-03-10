@@ -43,7 +43,7 @@
     "webpack": "^5.70.0"
   },
   "dependencies": {
-    "@ricardoaruiz/design-system-core": "^0.0.4"
+    "@ricardoaruiz/design-system-core": "^0.0.6"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

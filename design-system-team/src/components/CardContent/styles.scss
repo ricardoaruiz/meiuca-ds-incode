@@ -1,0 +1,31 @@
+.card-content {
+
+    &::part(card) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    ds-tag {
+        flex: 1;
+    }
+
+    ds-typograph[component="heading"] {
+        &::part(typograph) {
+            font-size: var(--font-size-lg);
+            font-family: var(--font-family-01);
+            font-weight: var(--font-weight-bold);
+            margin-top: var(--spacing-xxxs);
+            word-break: break-all;
+        }
+    }
+
+    ds-typograph[component="paragraph"] {
+        &::part(typograph) {
+            margin-top: var(--spacing-xxxs);
+            word-break: break-all;
+        }
+    }
+}
