@@ -1,6 +1,6 @@
 {
   "name": "@ricardoaruiz/design-system-core",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Biblioteca de Components Core para o Curso Design System in Code da Meiuca",
   "main": "index.js",
   "author": "Ricardo Ruiz",

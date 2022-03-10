@@ -14,7 +14,7 @@
     "select": {
         "import": "./src/components/select/index.ts"
     },
-    "typography": {
+    "typograph": {
         "import": "./src/components/typograph/index.ts"
     },
     "card": {
