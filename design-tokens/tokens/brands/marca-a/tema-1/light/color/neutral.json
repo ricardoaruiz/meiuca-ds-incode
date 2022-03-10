@@ -2,7 +2,7 @@
     "neutral": {
         "color": {
             "surface-pure": { "value": "#F5F5F5" },
-            "surface-01": { "value": "#000000" },
+            "surface-01": { "value": "#FFFFFF" },
             "surface-02": { "value": "#E0E0E0" },
             "surface-03": { "value": "#CCCCCC" },
             "elements-pure": { "value": "#292929" },
