@@ -16,5 +16,11 @@
     },
     "typography": {
         "import": "./src/components/typograph/index.ts"
+    },
+    "card": {
+        "import": "./src/components/card/index.ts"
+    },
+    "tag": {
+        "import": "./src/components/tag/index.ts"
     }
 }
