@@ -3,7 +3,16 @@ import { CardContentProps } from './types'
 import { CardContent } from './index'
 
 export default {
-    title: 'Team Lib/Card Content'
+    title: 'Team Lib/Card Content',
+    parameters: {
+        docs: {
+            source: {
+                code: `
+                    <CardContent tag="Tag" title="Title" text="Text" />
+                `
+            }
+        }
+      }
 } as Meta
 
 export const Default: Story<CardContentProps> = (args) => {
