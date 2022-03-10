@@ -1,0 +1,17 @@
+@import '@ricardoaruiz/design-tokens/dist/scss/mixins.scss';
+
+.card {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--neutral-color-surface-01);
+    border: var(--border-width-hairline) solid var(--neutral-color-surface-02);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-inset-md);
+    
+    @include motion-token(switch-slow, '&:hover');
+    &:hover {
+        box-shadow: var(--shadow-level3)  rgba(0, 0, 0, var(--opacity-light) );
+        transform: scale(1.01)
+    }
+}

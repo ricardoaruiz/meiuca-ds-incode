@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@ricardoaruiz/design-assets": "^0.0.1",
-    "@ricardoaruiz/design-tokens": "^0.0.1",
+    "@ricardoaruiz/design-tokens": "^0.0.2",
     "lit": "^2.2.0"
   }
 }
