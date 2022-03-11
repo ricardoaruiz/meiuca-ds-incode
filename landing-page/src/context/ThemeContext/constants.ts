@@ -15,5 +15,5 @@ export const themes: Themes = {
 export const defaultTheme = {
     brand: 'marca-1',
     themeName: 'tema-1',
-    mode: 'dark'
+    mode: 'light'
 } as Theme

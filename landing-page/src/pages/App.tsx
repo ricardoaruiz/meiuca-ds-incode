@@ -1,5 +1,6 @@
 import { TestComponent } from '@ricardoaruiz/design-system-team'
 import { useTheme } from '../context/ThemeContext'
+import { Header } from '../sections/Header'
 
 import './App.scss'
 
@@ -13,11 +14,17 @@ function App() {
       theme={theme.themeName} 
       mode={theme.mode}
     >
-      <TestComponent theme='primary' />
+      <Header />
+      
+      <div className="main-container">
+        <TestComponent theme='primary' />
+      </div>
+      
 
       <div className="
-        mt-8
+        main-container
         container 
+        mt-8
 
         grid 
         grid-cols-1 
@@ -28,7 +35,7 @@ function App() {
 
         lg:gap-3 
         lg:grid-cols-12
-        ">
+      ">
         <div>01</div>
         <div>02</div>
         <div>03</div>
@@ -45,12 +52,15 @@ function App() {
 
       {/* https://tailwindcss.com/docs/grid-template-rows#arbitrary-values */}
       <div className="
-        mt-8
+        main-container
         container 
+
+        mt-8
+
         grid 
         gap-1 
         grid-cols-[repeat(auto-fit,_minmax(100px,_auto))]
-        ">
+      ">
         <div className="col-span-2">01</div>
         <div>02</div>
         <div className="col-span-2">03</div>

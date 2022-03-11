@@ -1,19 +1,19 @@
-.container {
+.main-container {
   width: 100%;
   max-width: 1440px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 100px auto 0 auto;
   padding: 0 20px;
-  
+  box-sizing: border-box;
+
+}
+.container {
   & div {
     background-color: var(--brand-color-pure);
     color: var(--neutral-color-surface-pure);
     border-radius: var(--border-radius-md);
-
+  
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
 }

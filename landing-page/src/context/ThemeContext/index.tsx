@@ -16,18 +16,23 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     children
 }) => {
 
-    const [currentTheme, setCurrentTheme] = React.useState<Theme>(defaultTheme)
+    const [currentTheme, setCurrentTheme] = React.useState<Theme>({
+        brand,
+        themeName,
+        mode
+    })
 
     /**
      * Change the theme
      */
-    const changeTheme = React.useCallback((theme: Theme) => {
+    const changeTheme = React.useCallback((theme: Theme) => {       
         const themeStyle = document.querySelector('#theme-style')
 
         if (themeStyle) themeStyle.innerHTML = ''
 
         const currTheme = themes[`${theme.themeName}${theme.mode}`]
         themeStyle?.appendChild(document.createTextNode(currTheme))
+
         setCurrentTheme(theme)
     }, [])
 
@@ -40,18 +45,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         tagStyle.setAttribute('type','text/css')
         tagStyle.setAttribute('id','theme-style')
         document.head.appendChild(tagStyle)
-    }, [])
-
-    /**
-     * Set theme when theme changed
-     */
-     React.useEffect(() => {
         changeTheme({
             brand,
             themeName,
             mode
         })
-    }, [brand, themeName, mode])
+    }, [])
 
     /**
      * Context values

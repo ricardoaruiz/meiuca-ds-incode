@@ -1,0 +1,33 @@
+.container-options {
+    display: flex; 
+    justify-content: flex-end;
+    justify-content: center;
+    padding-top: 40px;
+    gap: 10px;
+
+    &__group {
+        display: flex;
+        flex-direction: row;
+
+        & label, & input {
+            cursor: pointer;
+            color: var(--neutral-color-elements-03);
+        }
+        
+        & > label + label {
+            margin-left: 20px;
+        }
+
+        & + div {
+            margin-left: 50px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .container-options {
+        padding-top: 0;
+        justify-content: flex-end;
+    }
+}

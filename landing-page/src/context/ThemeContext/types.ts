@@ -1,7 +1,7 @@
 export type ThemeProviderProps = {
-    brand: string
-    themeName: string
-    mode: string    
+    brand?: string
+    themeName?: string
+    mode?: string    
 }
 
 export type ThemeProviderData = {
