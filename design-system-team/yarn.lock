@@ -1428,10 +1428,10 @@
   resolved "https://registry.yarnpkg.com/@ricardoaruiz/design-assets/-/design-assets-0.0.1.tgz#40e45390c659f2157d88d411ed1b7b504399f35c"
   integrity sha512-DR901WDG9vWXVfrXsRc9CQUMzQFdYhhaB7vEJfwP94+tRaKjYO5UpYxy5N3NEiRZHMHb8+uDCcsd9399sYPKuQ==
 
-"@ricardoaruiz/design-system-core@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@ricardoaruiz/design-system-core/-/design-system-core-0.0.6.tgz#248bc55eb1b490a711543556fa1a1f2e270a4b72"
-  integrity sha512-evlz59hoorUerHshhORyr0IgYQYlEXhOfXH6RC/dj4e72J6tJoipco8Hmz7hFX+fk+CE8yrLG9+g+br3v41KvQ==
+"@ricardoaruiz/design-system-core@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@ricardoaruiz/design-system-core/-/design-system-core-0.0.7.tgz#16b7a8ad2a9d2f87d7be3e33ce454a2fb327e18e"
+  integrity sha512-La97wcPtyHBzIgDSBoVXPP3E6jQrJJmLYWhfa7s4cOrK77+qh400kHyXMVZRjtx5dWC7uIdti6GtxPDLHSbIRw==
   dependencies:
     "@ricardoaruiz/design-assets" "^0.0.1"
     "@ricardoaruiz/design-tokens" "^0.0.2"

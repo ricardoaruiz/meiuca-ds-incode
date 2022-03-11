@@ -1,6 +1,6 @@
 {
   "name": "@ricardoaruiz/design-system-team",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
@@ -43,7 +43,7 @@
     "webpack": "^5.70.0"
   },
   "dependencies": {
-    "@ricardoaruiz/design-system-core": "^0.0.6"
+    "@ricardoaruiz/design-system-core": "^0.0.7"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
