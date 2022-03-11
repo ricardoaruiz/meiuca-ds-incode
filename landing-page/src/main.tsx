@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import '@ricardoaruiz/design-tokens/dist/css/globals.css'
-import '@ricardoaruiz/design-tokens/dist/css/marca-a/tema-1/light.css'
+import { ThemeProvider } from './context/ThemeContext'
+import App from './pages/App'
 
 import './index.scss'
-import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider brand='marca-a' themeName='tema-2' mode='dark'>
+      <App />      
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

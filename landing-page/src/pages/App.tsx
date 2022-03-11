@@ -1,10 +1,18 @@
 import { TestComponent } from '@ricardoaruiz/design-system-team'
+import { useTheme } from '../context/ThemeContext'
 
 import './App.scss'
 
 function App() {
+
+  const { theme } = useTheme()
+
   return (
-    <div>
+    <div 
+      brand={theme.brand}
+      theme={theme.themeName} 
+      mode={theme.mode}
+    >
       <TestComponent theme='primary' />
 
       <div className="
