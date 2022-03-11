@@ -1,22 +1,19 @@
-import { TestComponent } from '@ricardoaruiz/design-system-team'
 import { useTheme } from '../context/ThemeContext'
 import { Header } from '../sections/Header'
 
 import './App.scss'
 
 function App() {
-
   const { theme } = useTheme()
 
   return (
-    <div 
+    <div
       brand={theme.brand}
-      theme={theme.themeName} 
+      theme={theme.themeName}
       mode={theme.mode}
       className="pt-24"
     >
       <Header />
-      
     </div>
   )
 }

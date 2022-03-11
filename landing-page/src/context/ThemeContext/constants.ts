@@ -6,14 +6,14 @@ import theme2Light from '@ricardoaruiz/design-tokens/dist/css/marca-a/tema-2/lig
 import theme2Dark from '@ricardoaruiz/design-tokens/dist/css/marca-a/tema-2/dark.css'
 
 export const themes: Themes = {
-    'tema-1light': theme1Light,
-    'tema-1dark': theme1Dark,
-    'tema-2light': theme2Light,
-    'tema-2dark': theme2Dark,
+  'tema-1light': theme1Light,
+  'tema-1dark': theme1Dark,
+  'tema-2light': theme2Light,
+  'tema-2dark': theme2Dark,
 }
 
 export const defaultTheme = {
-    brand: 'marca-1',
-    themeName: 'tema-1',
-    mode: 'light'
+  brand: 'marca-1',
+  themeName: 'tema-1',
+  mode: 'light',
 } as Theme
