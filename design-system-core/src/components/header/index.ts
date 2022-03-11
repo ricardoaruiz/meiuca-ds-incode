@@ -5,6 +5,7 @@ import { createSvgElement } from '../../utils/svgHelper'
 import menu from '@ricardoaruiz/design-assets/dist/assets/icons/menu'
 import close from '@ricardoaruiz/design-assets/dist/assets/icons/close'
 import Brand from './Brand'
+import '../icon'
 
 import style from './style.scss'
 
