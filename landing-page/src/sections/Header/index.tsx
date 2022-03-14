@@ -25,7 +25,7 @@ export const Header = () => {
   )
 
   return (
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 gap-1">
       <div className="col-span-12">
         <ds-header>
           <div className="container-options">

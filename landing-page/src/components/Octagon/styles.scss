@@ -1,0 +1,62 @@
+.octagon-brand {
+  position: relative;
+  width: 276px;
+  height: 276px;
+
+  @media screen and (min-width: 768px) {
+    width: 560px;
+    height: 560px;
+  }
+
+  &__shape {
+    width: 100%;
+    height: auto;
+
+    path{
+      fill: var(--neutral-color-elements-03);
+    }
+  }
+
+  &__msg {
+    position: absolute;
+    width: 146px;
+    height: 69px;
+    top: 90px;
+    left: 65px;
+
+    @media screen and (min-width: 768px) {
+      width: 295px;
+      height: 140px;
+      top: 190px;
+      left: 130px;
+    }
+
+    path {
+      fill: var(--neutral-color-surface-01);
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    width: 87px;
+    height: 23px;
+    top: 170px;
+    left: 95px;
+
+    @media screen and (min-width: 768px) {
+      width: 177px;
+      height: 47px;
+      top: 350px;
+      left: 190px;
+    }
+
+    path:first-of-type {
+      fill: var(--highlight-color-01);
+    }
+
+    path {
+      fill: var(--highlight-color-02);
+    }
+  }
+
+}

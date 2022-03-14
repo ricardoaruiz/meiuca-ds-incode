@@ -1,5 +1,6 @@
 import { useTheme } from '../context/ThemeContext'
 import { Header } from '../sections/Header'
+import { HomeBanner } from '../sections/HomeBanner'
 
 import './App.scss'
 
@@ -14,6 +15,7 @@ function App() {
       className="pt-24"
     >
       <Header />
+      <HomeBanner />
     </div>
   )
 }

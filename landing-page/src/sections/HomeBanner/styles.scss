@@ -1,0 +1,35 @@
+.home-banner {
+  ds-typograph[component="heading"] {
+    &::part(typograph) {
+      margin-top: var(--spacing-xxxs)
+    }
+  }
+
+  ds-typograph[component=paragraph] {
+    max-width: 285px;
+    &::part(typograph) {
+      margin-top: var(--spacing-xxxs);
+      line-height: var(--line-height-lg);
+    }
+  }
+}
+
+.octagon-session {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 244px;
+  height: 380px;
+  background-color: var(--brand-color-pure);
+
+  & .octogon-container {
+    position: relative;
+    left: -50px;
+    top: -200px;
+
+    @media screen and (min-width: 768px) {
+      left: -100px;
+      top: -350px;
+    }
+  }
+}

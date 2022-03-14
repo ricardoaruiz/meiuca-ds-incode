@@ -32,6 +32,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     const currTheme = themes[`${theme.themeName}${theme.mode}`]
     themeStyle?.appendChild(document.createTextNode(currTheme))
 
+    theme.mode === 'dark'
+      ? (document.body.style.backgroundColor = '#333')
+      : (document.body.style.backgroundColor = '#fff')
+
     setCurrentTheme(theme)
   }, [])
 
@@ -44,6 +48,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     tagStyle.setAttribute('type', 'text/css')
     tagStyle.setAttribute('id', 'theme-style')
     document.head.appendChild(tagStyle)
+
     changeTheme({
       brand,
       themeName,
