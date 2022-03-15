@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react'
 import { CardContentProps } from './types'
-import { CardContent } from './index'
+import CardContent from './index'
 
 export default {
     title: 'Team Lib/Card Content',
