@@ -1,5 +1,6 @@
 .home-cards {
   margin-top:var(--spacing-xxxl);
+  padding: 0 16px;
 
   ds-typograph[component="heading"] {
     &::part(typograph) {

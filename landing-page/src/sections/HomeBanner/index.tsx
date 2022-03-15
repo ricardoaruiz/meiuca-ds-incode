@@ -3,6 +3,7 @@ import React from 'react'
 import '@ricardoaruiz/design-system-core/dist/components/tag'
 import '@ricardoaruiz/design-system-core/dist/components/typograph'
 import Octagon from '../../components/Octagon'
+import { ReactComponent as ArrowDown } from './arrow-down.svg'
 
 import './styles.scss'
 
@@ -67,7 +68,8 @@ export const HomeBanner = () => {
       </div>
 
       <div className="octagon-session">
-        <div className="octogon-container">
+        <ArrowDown className="octagon-session__arrow" />
+        <div className="octagon-session__container">
           <Octagon />
         </div>
       </div>
