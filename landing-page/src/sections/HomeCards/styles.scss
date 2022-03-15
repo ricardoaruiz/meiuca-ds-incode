@@ -1,0 +1,50 @@
+.home-cards {
+  margin-top:var(--spacing-xxxl);
+
+  ds-typograph[component="heading"] {
+    &::part(typograph) {
+      margin-top: var(--spacing-xs);
+      font-family: var(--font-family-01);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-xxl);
+      max-width: 343px;
+
+      @media screen and (min-width: 768px) {
+        max-width: 447px;
+      }
+    }
+  }
+
+  ds-typograph[component="paragraph"] {
+    &::part(typograph) {
+      margin-top: var(--spacing-nano);
+      max-width: 254px;
+
+      @media screen and (min-width: 768px) {
+        max-width: 212px;
+      }
+    }
+
+  }
+
+  &__container {
+    box-sizing: border-box;
+    margin-top: var(--spacing-huge);
+    overflow-x: auto;
+    display: flex;
+    gap: 24px;
+    height: 417px;
+    padding: 10px 24px;
+
+
+    &-card {
+      flex: 0 0 315px;
+
+      @media screen and (min-width: 768px) {
+        flex: 0 0 330px;
+      }
+    }
+
+  }
+
+}

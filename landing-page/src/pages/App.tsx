@@ -1,6 +1,7 @@
 import { useTheme } from '../context/ThemeContext'
 import { Header } from '../sections/Header'
 import { HomeBanner } from '../sections/HomeBanner'
+import { HomeCards } from '../sections/HomeCards'
 
 import './App.scss'
 
@@ -16,6 +17,7 @@ function App() {
     >
       <Header />
       <HomeBanner />
+      <HomeCards />
     </div>
   )
 }
