@@ -1,3 +1,4 @@
-import TestComponent from "./components/TestComponent";
+import { TestComponent } from "./components/TestComponent";
+import { CardContent } from "./components/CardContent";
 
-export { TestComponent };
+export { CardContent, TestComponent };
