@@ -1,6 +1,6 @@
 {
   "name": "@ricardoaruiz/design-system-team",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
@@ -9,7 +9,7 @@
   "author": "Ricardo Ruiz",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rimraf build && rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -33,6 +33,7 @@
     "postcss": "^8.4.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
     "rollup": "^2.70.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
@@ -43,7 +44,7 @@
     "webpack": "^5.70.0"
   },
   "dependencies": {
-    "@ricardoaruiz/design-system-core": "^0.0.7"
+    "@ricardoaruiz/design-system-core": "^0.0.8"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

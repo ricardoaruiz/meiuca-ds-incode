@@ -5,7 +5,7 @@ import '@ricardoaruiz/design-system-core/dist/components/button'
 import { TestComponentProps } from "./types";
 import "./styles.scss";
 
-export const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
+const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
   <div
     data-testid="test-component"
     className={`test-component test-component-${theme}`}
@@ -17,3 +17,5 @@ export const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
 		<ds-button>This is DSButton</ds-button>
   </div>
 );
+
+export default TestComponent

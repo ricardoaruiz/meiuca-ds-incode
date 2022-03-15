@@ -7,7 +7,7 @@ import '@ricardoaruiz/design-system-core/dist/components/tag'
 import { CardContentProps } from './types'
 import './styles.scss'
 
-export const CardContent: React.VFC<CardContentProps> = ({ tag, title, text }) => {
+const CardContent: React.VFC<CardContentProps> = ({ tag, title, text }) => {
   return (
     <ds-card class="card-content">
         <ds-tag>{tag}</ds-tag>
@@ -28,3 +28,5 @@ export const CardContent: React.VFC<CardContentProps> = ({ tag, title, text }) =
     </ds-card>
   )
 }
+
+export default CardContent
