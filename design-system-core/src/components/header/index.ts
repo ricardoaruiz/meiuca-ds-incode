@@ -1,4 +1,4 @@
-import { html, css, LitElement, unsafeCSS, property, customElement } from 'lit-element'
+import { html, css, LitElement, unsafeCSS, property } from 'lit-element'
 import { classMap } from 'lit/directives/class-map.js'
 
 import { createSvgElement } from '../../utils/svgHelper'
@@ -9,7 +9,6 @@ import '../icon'
 
 import style from './style.scss'
 
-@customElement('ds-header')
 export default class DSHeader extends LitElement {
 
     static styles = css`
@@ -62,3 +61,5 @@ export default class DSHeader extends LitElement {
         `
     }
 }
+
+if (!customElements.get('ds-header')) { customElements.define('ds-header', DSHeader); }

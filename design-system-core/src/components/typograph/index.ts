@@ -1,11 +1,10 @@
 import { LitElement, html, css, unsafeCSS } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 import { TypographComponent, TypographSize, TypographVariant } from './types';
 import style from './style.scss'
 
-@customElement('ds-typograph')
 export default class DSTypograph extends LitElement {
 
     static styles = css`
@@ -57,3 +56,5 @@ export default class DSTypograph extends LitElement {
         return this._elements(this.component)
     }
 }
+
+if (!customElements.get('ds-typograph')) { customElements.define('ds-typograph', DSTypograph); }

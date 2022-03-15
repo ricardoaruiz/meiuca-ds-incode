@@ -1,8 +1,7 @@
-import { LitElement, html, css, unsafeCSS, customElement } from 'lit-element'
+import { LitElement, html, css, unsafeCSS } from 'lit-element'
 
 import styles from './styles.scss'
 
-@customElement("ds-card")
 export default class DSCard extends LitElement {
 
     static styles = css`
@@ -25,3 +24,5 @@ export default class DSCard extends LitElement {
     }
 
 }
+
+if (!customElements.get('ds-card')) { customElements.define('ds-card', DSCard); }

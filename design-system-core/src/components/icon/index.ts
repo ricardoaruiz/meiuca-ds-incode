@@ -1,4 +1,4 @@
-import { html, css, LitElement, unsafeCSS, property, customElement } from 'lit-element'
+import { html, css, LitElement, unsafeCSS, property } from 'lit-element'
 import { classMap } from 'lit/directives/class-map.js'
 import { createSvgElement } from '../../utils/svgHelper'
 
@@ -6,7 +6,6 @@ import style from './style.scss'
 
 type IconSize = 'sm' | 'md' | 'lg'
 
-@customElement('ds-icon')
 export class DSIcon extends LitElement {
 
     static styles = css`
@@ -36,3 +35,5 @@ export class DSIcon extends LitElement {
     }
 
 }
+
+if (!customElements.get('ds-icon')) { customElements.define('ds-icon', DSIcon); }

@@ -1,6 +1,6 @@
 {
   "name": "@ricardoaruiz/design-system-core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Biblioteca de Components Core para o Curso Design System in Code da Meiuca",
   "main": "index.js",
   "author": "Ricardo Ruiz",
@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "dev": "webpack serve --config webpack.config.development.js",
-    "build:dev": "webpack --config webpack.config.development.js",
-    "build:prod": "webpack --config webpack.config.production.js",
+    "build:dev": "rimraf dist && webpack --config webpack.config.development.js",
+    "build:prod": "rimraf dist && webpack --config webpack.config.production.js",
     "test": "web-test-runner --node-resolve --puppeteer",
     "test:coverage": "web-test-runner --node-resolve --coverage",
     "test:watch": "web-test-runner src/**/*.test.ts --node-resolve --watch",
@@ -42,6 +42,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
+    "rimraf": "^3.0.2",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "sass-to-string": "^1.6.2",

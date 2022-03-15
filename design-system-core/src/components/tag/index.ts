@@ -1,8 +1,7 @@
-import { LitElement, html, css, unsafeCSS, customElement  } from 'lit-element'
+import { LitElement, html, css, unsafeCSS  } from 'lit-element'
 
 import styles from './styles.scss'
 
-@customElement('ds-tag')
 export default class DSTag extends LitElement {
 
     static styles = css`
@@ -18,3 +17,5 @@ export default class DSTag extends LitElement {
     }
 
 }
+
+if (!customElements.get('ds-tag')) { customElements.define('ds-tag', DSTag); }

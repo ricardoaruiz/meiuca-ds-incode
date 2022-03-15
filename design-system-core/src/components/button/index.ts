@@ -1,10 +1,9 @@
-import { LitElement, html, css, unsafeCSS, customElement, property } from "lit-element";
+import { LitElement, html, css, unsafeCSS, property } from "lit-element";
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 import style from './style.scss'
 
-@customElement("ds-button")
 export class DSButton extends LitElement {
 
   static styles = css`
@@ -43,3 +42,5 @@ export class DSButton extends LitElement {
     `
   }
 }
+
+if (!customElements.get('ds-button')) { customElements.define('ds-button', DSButton); }

@@ -1,9 +1,8 @@
-import { LitElement, html, css, unsafeCSS, customElement, property } from "lit-element";
+import { LitElement, html, css, unsafeCSS, property } from "lit-element";
 import { classMap } from 'lit/directives/class-map.js';
 
 import style from './style.scss'
 
-@customElement("ds-select")
 export class DSSelect extends LitElement {
 
   static styles = css`
@@ -131,3 +130,5 @@ export class DSSelect extends LitElement {
     `
   }
 }
+
+if (!customElements.get('ds-select')) { customElements.define('ds-select', DSSelect); }
